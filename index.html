@@ -16,15 +16,42 @@
   </head>
   <body>
     <div id="board">
-      <div title="0" class="board-box"></div>
-      <div title="1" class="board-box"></div>
-      <div title="2" class="board-box"></div>
-      <div title="3" class="board-box"></div>
-      <div title="4" class="board-box"></div>
-      <div title="5" class="board-box"></div>
-      <div title="6" class="board-box"></div>
-      <div title="7" class="board-box"></div>
-      <div title="8" class="board-box"></div>
+      <div id="0" class="board-box"></div>
+      <div id="1" class="board-box"></div>
+      <div id="2" class="board-box"></div>
+      <div id="3" class="board-box"></div>
+      <div id="4" class="board-box"></div>
+      <div id="5" class="board-box"></div>
+      <div id="6" class="board-box"></div>
+      <div id="7" class="board-box"></div>
+      <div id="8" class="board-box"></div>
+    </div>
+    <div class="modal-container">
+      <form id="start-form">
+        <button id="close-start-form">X</button>
+        <header>Empezá un juego nuevo!</header>
+        <input type="text" placeholder="Escribí acá tu nombre" id="name" />
+        <span>Elegí tu símbolo:</span>
+        <div id="symbols">
+          <input type="radio" id="cross" name="symbol" />
+          <label for="cross">X</label>
+          <input type="radio" id="circle" name="symbol"/ >
+          <label for="circle">O</label>
+        </div>
+        <span>Contra quién vas a jugar?</span>
+        <div id="oponents">
+          <input type="radio" id="human" name="oponent"/ >
+          <label for="human">Un Amigo</label>
+          <input type="radio" id="computer" name="oponent" />
+          <label for="computer">La Compu</label>
+        </div>
+        <input
+          type="text"
+          placeholder="Escribí acá su nombre"
+          id="oponent-name"
+        />
+        <footer><button type="submit" id="submit">Iniciar!</button></footer>
+      </form>
     </div>
   </body>
 </html>
