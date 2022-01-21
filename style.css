@@ -39,8 +39,9 @@ body {
   background-color: rgba(255, 255, 255, 0.35);
   border-radius: 5vmin;
   display: flex;
-  height: 95vh;
+  height: 90vh;
   width: 90vmin;
+  padding: 1vmin;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -48,14 +49,14 @@ body {
 
 button#close-start-form {
   padding-right: 5%;
-  margin-top: 2vh;
-  margin-bottom: -5vh;
+  margin-top: 2vmin;
+  margin-bottom: -5vmin;
   align-self: flex-end;
-  font-size: 3vh;
+  font-size: 4vmin;
   background-color: transparent;
   border: none;
   color: grey;
-  text-shadow: 0.2vh 0.2vh 0.5vh black;
+  text-shadow: 0.2vmin 0.2vmin 0.5vmin black;
 }
 
 #start-form header {
@@ -67,26 +68,26 @@ button#close-start-form {
   width: 80%;
   color: white;
   margin: 1vmin;
-  font-size: 4vh;
+  font-size: 8vmin;
   text-align: center;
-  text-shadow: 0.2vh 0.2vh 0.5vh black;
-  box-shadow: 0.2vh 0.2vh 0.5vh black;
-  border-radius: 25vh;
-  border: solid 1vh green;
+  text-shadow: 0.2vmin 0.2vmin 0.5vmin black;
+  box-shadow: 0.2vmin 0.2vmin 0.5vmin black;
+  border-radius: 25vmin;
+  border: solid 1vmin green;
 }
 
 #start-form input {
-  width: 75vmin;
-  border-radius: 5vh;
+  width: 70vmin;
+  border-radius: 5vmin;
   text-align: center;
-  border: rgb(134, 173, 255) 0.5vh solid;
-  font-size: 2.5vh;
+  border: rgb(134, 173, 255) 0.5vmin solid;
+  font-size: 5vmin;
 }
 
 #start-form span {
-  font-size: 3vh;
+  font-size: 5vmin;
   color: rgb(134, 173, 255);
-  text-shadow: 0.2vh 0.2vh 0.5vh black;
+  text-shadow: 0.2vmin 0.2vmin 0.5vmin black;
 }
 
 #start-form #symbols {
@@ -96,32 +97,31 @@ button#close-start-form {
 }
 #start-form #symbols label {
   text-align: center;
-  width: 7vh;
-  height: 7vh;
-  font-size: 4vh;
+  width: 12vmin;
+  height: 12vmin;
+  font-size: 7vmin;
   color: white;
-  border: white 0.5vh solid;
+  border: white 0.5vmin solid;
   border-radius: 100%;
-  text-shadow: 0.2vh 0.2vh 0.5vh black;
+  text-shadow: 0.2vmin 0.2vmin 0.5vmin black;
+}
+#start-form #oponents {
+  gap: 2vmin;
+  display: grid;
+  width: 70vmin;
+  height: 15vh;
 }
 #start-form #oponents label {
-  padding: 0.5vh 1vh;
+  margin: auto;
+  font-size: 4vmin;
+  width: 30vmin;
   text-align: center;
-  font-size: 3vh;
   color: white;
-  border: white 0.5vh solid;
-  border-radius: 25vh;
-  text-shadow: 0.2vh 0.2vh 0.5vh black;
+  border: white 0.5vmin solid;
+  border-radius: 25vmin;
+  text-shadow: 0.2vmin 0.2vmin 0.5vmin black;
 }
 
-#start-form #oponents {
-  width: 80vmin;
-  height: 15vh;
-  display: grid;
-  gap: 1vh;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-}
 #human {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -133,29 +133,28 @@ button#close-start-form {
 }
 
 .oponent-name {
-  display: none;
-  margin-top: 2vh;
-  justify-self: center;
+  margin: auto;
   grid-column: 1/ 3;
   grid-row: 2 / 3;
+  display: none;
 }
 
 .dificulty {
-  display: none;
-  justify-content: space-evenly;
-  width: 100%;
-  margin-top: 2vh;
-  justify-self: center;
   grid-column: 1/ 3;
   grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  display: none;
 }
+
 [type="radio"] {
   display: none;
 }
 
 :checked + label {
   background-color: green;
-  box-shadow: 0.5vh 1vh black;
+  box-shadow: 0.5vmin 1vmin black;
 }
 
 #human:checked ~ .oponent-name {
@@ -168,14 +167,14 @@ button#close-start-form {
 
 button#submit {
   background-color: transparent;
-  padding: 1vh 2vh;
-  margin-bottom: 2vh;
+  padding: 1vmin 2vmin;
+  margin: 2vmin 0;
   text-align: center;
-  font-size: 4vh;
+  font-size: 4vmin;
   color: white;
   background-color: green;
-  border: white 1vh solid;
-  border-radius: 25vh;
+  border: white 1vmin solid;
+  border-radius: 25vmin;
   text-shadow: 1px 1px 2px black;
 }
 

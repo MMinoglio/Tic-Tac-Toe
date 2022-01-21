@@ -5,7 +5,7 @@ const player = (name, symbol) => {
 };
 
 const gameBoard = (() => {
-  const board = ["X",,"O",,"X",,"O",,"X"];
+  const board = ["X", , "O", , "X", , "O", , "X"];
   const getState = () => board;
   const resetBoard = () => (board = []);
   const insertSymbol = (symbol, box) => (board[box] = symbol);
@@ -27,20 +27,37 @@ const displayController = (() => {
   const boardState = () => gameBoard.getState();
   const selectBox = (box) => gameFlow.boxSelected(box);
   const getStartWindow = () => document.querySelector(".modal-container");
+  const getStartButton = () => document.getElementById("submit");
+  const getPlayerName = () => document.getElementById("name");
+  const getPlayerSymbol = () => {
+    document.querySelectorAll('input[name="symbol"]').forEach((element) => {
+      element.checked ? console.log(element.value) : console.log("cross");
+    });
+  };
   const refresh = () => {
     boardState().forEach((element, index) => {
       listBoxes()[index].textContent = element;
     });
   };
+  const showStart = () => {
+    getStartWindow().classList.add("show");
+    getStartButton().addEventListener("click", (event) => {
+      event.preventDefault();
+      startGame();
+    });
+  };
+
+  const startGame = () => {
+    console.log(getPlayerName().value);
+    getPlayerSymbol();
+  };
+
   listBoxes().forEach((box) => {
     box.addEventListener("click", (event) => {
       if (!!event.target.textContent) return;
       selectBox(event.target.id);
     });
   });
-  const showStart = () => {
-    getStartWindow().classList.add("show");
-  }
   refresh();
   showStart();
 
@@ -49,7 +66,7 @@ const displayController = (() => {
 
 const gameFlow = (() => {
   let player1Turn = Math.random() > 0.5;
-  
+
   const isWinner = (player) => gameBoard.checkLineSymbol(player.getSymbol());
   const refresh = () => displayController.refresh();
   const insertSymbol = (symbol, box) => gameBoard.insertSymbol(symbol, box);
@@ -63,7 +80,7 @@ const gameFlow = (() => {
     player1Turn = !player1Turn;
     refresh();
     if (isWinner(player)) {
-      console.log(`${player.getName()} is the winner!!!`)
+      console.log(`${player.getName()} is the winner!!!`);
     }
   };
   return { boxSelected };
