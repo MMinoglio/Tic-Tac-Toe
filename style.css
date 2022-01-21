@@ -5,8 +5,6 @@
   font-family: "Mochiy Pop P One", sans-serif;
 }
 
-
-
 body {
   width: 100vw;
   height: 100vh;
@@ -25,8 +23,8 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   pointer-events: none;
   opacity: 0;
   transition: all 1s;
@@ -45,12 +43,13 @@ body {
   width: 90vmin;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 button#close-start-form {
   padding-right: 5%;
-  margin-top: -2vh;
+  margin-top: 2vh;
+  margin-bottom: -5vh;
   align-self: flex-end;
   font-size: 3vh;
   background-color: transparent;
@@ -59,28 +58,32 @@ button#close-start-form {
   text-shadow: 0.2vh 0.2vh 0.5vh black;
 }
 
-
 #start-form header {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: rgb(134, 173, 255);
-  font-size: 3vh;
+  justify-content: center;
+  align-content: center;
+  text-align: center0;
+  background-color: rgb(76, 128, 250);
+  width: 80%;
+  color: white;
+  margin: 1vmin;
+  font-size: 4vh;
+  text-align: center;
   text-shadow: 0.2vh 0.2vh 0.5vh black;
+  box-shadow: 0.2vh 0.2vh 0.5vh black;
+  border-radius: 25vh;
+  border: solid 1vh green;
 }
-
-
-
 
 #start-form input {
   width: 75vmin;
   border-radius: 5vh;
   text-align: center;
-  border: rgb(134, 173, 255) 1vh solid;
+  border: rgb(134, 173, 255) 0.5vh solid;
   font-size: 2.5vh;
 }
 
-#start-form span{
+#start-form span {
   font-size: 3vh;
   color: rgb(134, 173, 255);
   text-shadow: 0.2vh 0.2vh 0.5vh black;
@@ -93,46 +96,80 @@ button#close-start-form {
 }
 #start-form #symbols label {
   text-align: center;
-  width: 8vh;
-  height: 8vh;
+  width: 7vh;
+  height: 7vh;
   font-size: 4vh;
   color: white;
-  border: white 1vh solid;
+  border: white 0.5vh solid;
   border-radius: 100%;
   text-shadow: 0.2vh 0.2vh 0.5vh black;
 }
-
-[type="radio"] {display: none;
-
-}
-:checked + label{
-  background-color:rgb(67, 127, 255);
-  box-shadow: 0.5vh 1vh black;
-}
-
 #start-form #oponents label {
   padding: 0.5vh 1vh;
   text-align: center;
   font-size: 3vh;
   color: white;
-  border: white 1vh solid;
-  border-radius:25vh;
+  border: white 0.5vh solid;
+  border-radius: 25vh;
   text-shadow: 0.2vh 0.2vh 0.5vh black;
 }
 
 #start-form #oponents {
   width: 80vmin;
-  display: flex;
-  justify-content: space-evenly;
-  
+  height: 15vh;
+  display: grid;
+  gap: 1vh;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
-#start-form footer {
-  justify-self: flex-end;
+#human {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#computer {
+  grid-column: 2/ 3;
+  grid-row: 1 / 2;
+}
+
+.oponent-name {
+  display: none;
+  margin-top: 2vh;
+  justify-self: center;
+  grid-column: 1/ 3;
+  grid-row: 2 / 3;
+}
+
+.dificulty {
+  display: none;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 2vh;
+  justify-self: center;
+  grid-column: 1/ 3;
+  grid-row: 2 / 3;
+}
+[type="radio"] {
+  display: none;
+}
+
+:checked + label {
+  background-color: green;
+  box-shadow: 0.5vh 1vh black;
+}
+
+#human:checked ~ .oponent-name {
+  display: block;
+}
+
+#computer:checked ~ .dificulty {
+  display: flex;
 }
 
 button#submit {
   background-color: transparent;
   padding: 1vh 2vh;
+  margin-bottom: 2vh;
   text-align: center;
   font-size: 4vh;
   color: white;
@@ -141,8 +178,6 @@ button#submit {
   border-radius: 25vh;
   text-shadow: 1px 1px 2px black;
 }
-
-
 
 #board {
   width: 70vmin;

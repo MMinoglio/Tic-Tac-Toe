@@ -29,7 +29,7 @@
     <div class="modal-container">
       <form id="start-form">
         <button id="close-start-form">X</button>
-        <header>Empezá un juego nuevo!</header>
+        <header>TA-TE-TI</header>
         <input type="text" placeholder="Escribí acá tu nombre" id="name" />
         <span>Elegí tu símbolo:</span>
         <div id="symbols">
@@ -41,16 +41,24 @@
         <span>Contra quién vas a jugar?</span>
         <div id="oponents">
           <input type="radio" id="human" name="oponent"/ >
-          <label for="human">Un Amigo</label>
+          <label id="human" for="human">Un Amigo</label>
           <input type="radio" id="computer" name="oponent" />
-          <label for="computer">La Compu</label>
+          <label id="computer" for="computer">La Compu</label>
+          <div class="oponent-name">
+            <input
+              type="text"
+              placeholder="Escribí acá su nombre"
+              id="oponent-name"
+            />
+          </div>
+          <div class="dificulty">
+            <input type="radio" id="easy" name="dificulty"/ >
+            <label for="easy">Facil</label>
+            <input type="radio" id="hard" name="dificulty" />
+            <label for="hard">Dificil</label>
+          </div>
         </div>
-        <input
-          type="text"
-          placeholder="Escribí acá su nombre"
-          id="oponent-name"
-        />
-        <footer><button type="submit" id="submit">Iniciar!</button></footer>
+        <button type="submit" id="submit">Iniciar!</button>
       </form>
     </div>
   </body>
